@@ -1,0 +1,117 @@
+* {
+    font-family: helvetica;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    border-bottom: 1px solid #ccc;
+    padding: 1em 2em;
+    margin-bottom: 1em;
+    background-color: #db4c3f;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+#navbar ul li {
+    margin-left: 1em;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container .main-form {
+    margin-top: 1.5em;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-control label {
+    font-weight: bold;
+    margin-bottom: 0.3em;
+}
+
+.form-control textarea,
+.form-control input {
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+    background-color: #db4c3f;
+    color: #fff;
+    padding: 0.7em 1.5em;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.alltasks {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 3%;
+}
+
+.tasks{
+    flex: 1 1 50%;
+    padding: 1em 2em;
+    border: 1px solid #ccc;
+}
+
+.tasks h1, h2, h3, h4, h5, h6{
+    margin: .5em 0;
+}
+
+.actions{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.actions  i{
+    font-size: 1.5em;
+    /* color: black; */
+}
+.actions button{
+    background-color: transparent;
+    border: none;
+    color: blue;
+}
+.actions button:hover{
+    color: #db4c3f;
+    cursor: pointer;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #db4c3f;
+    padding: 1em;
+    text-align: center;
+}

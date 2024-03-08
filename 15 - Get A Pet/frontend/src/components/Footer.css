@@ -1,0 +1,9 @@
+footer{
+    text-align: center;
+    padding: 4em;
+    font-weight: bold;
+    color: #232628;
+    background-color: #EDEDED;
+    border-top: black 1px solid;
+    margin-top: 3em;
+}

@@ -1,0 +1,65 @@
+#myadoptions span {
+    color: black;
+    font-weight: normal;
+}
+
+.adoption {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #154698;
+    margin: 0em 1em;
+    padding: 1em;
+}
+
+@media (max-width: 660px) {
+    .adoption {
+        flex-direction: column;
+        
+    }
+}
+
+.adoption .adoptionAction {
+    display: flex;
+    gap: 15%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.petNameAndImage {
+    display: flex;
+    align-items: center;
+    gap: 7%;
+}
+
+.petImage-circle {
+    /* width: 5dvw;
+    height: 5dvw; */
+    /* border-radius: 50%; */
+}
+
+.adoptionInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-basis: 50%;
+}
+
+.adoptionInfo div:not(.contactInfo) {
+    flex-basis: 35%;
+}
+
+.contactInfo {
+    flex-basis: 60%;
+}
+
+.adoptionStatus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-and-link {
+    display: flex;
+    justify-content: space-between;
+}

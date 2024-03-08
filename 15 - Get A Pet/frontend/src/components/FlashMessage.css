@@ -1,0 +1,33 @@
+#flash-container,
+#flash-container>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#flash-container>div {
+    margin-top: 1em;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    flex-basis: 60%;
+    padding: 0 2em;
+}
+
+#flash-container>div h4 {
+    font-weight: normal;
+}
+
+.flash-info {
+    color: #261da4;
+    background-color: #6a83c952;
+}
+
+.flash-error {
+    color: #a41d1d;
+    background-color: #c96a6a52;
+}
+
+.flash-success {
+    color: #1da424;
+    background-color: #6ac98252;
+}

@@ -1,0 +1,84 @@
+<div class="container">
+    <div id="home">
+
+        {{!-- {{#if message.success}}
+        <div class="flash flash-success">
+            <div>
+                <p>{{message.success}}</p>
+            </div>
+        </div>
+        {{/if}}
+
+        {{#if message.warning}}
+        <div class="flash flash-warning">
+            <div>
+                <p>{{message.warning}}</p>
+            </div>
+        </div>
+        {{/if}} --}}
+
+        {{#if filter.search}}
+        <div>
+            <h1>You are looking for: <span>{{filter.search}}</span></h1>
+        </div>
+        <div>
+            {{#if filter.plural}}
+            <p>Were found <span>{{filter.count}}</span> thoughts.</p>
+            {{else}}
+            <p>Was found <span>{{filter.count}}</span> thought.</p>
+            {{/if}}
+        </div>
+        {{else}}
+        <div>
+            <h1>Meet some of our <span>Thoughts</span>:</h1>
+        </div>
+        {{/if}}
+
+        <div id="finder">
+            <form action="/" method="get">
+                <div>
+                    {{!-- <label for="search"></label> --}}
+                    <input type="text" name="search" id="search" placeholder="What are you looking for?"
+                        value="{{filter.search}}">
+                    <input class="btn-default" type="submit" value="Search">
+                    <input type="hidden" name="order" value="{{filter.order}}">
+                </div>
+            </form>
+            <div>
+                Order by:
+                <ul>
+                    <li>
+                        <a href="?search={{filter.search}}&order=desc"><i class="bi bi-arrow-up"></i> Newer</a>
+                    </li>
+                    <li>
+                        <a href="?search={{filter.search}}&order=asc"><i class="bi bi-arrow-down"></i> Older</a>
+                    </li>
+                    <li>
+                        <a href="/">Clear</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="allThoughts">
+            {{#each thoughtsFormatted}}
+            <div class="thought">
+                <h2>"{{this.message}}"</h2>
+                <p>by <span>{{this.User.name}}</span></p>
+                <div id="info">
+                    <form action="/actions/like" method="post">
+                        <div>
+                            <input type="hidden" name="thoughtId" value="{{this.id}}">
+                            <button type="submit">Like</button>
+                        </div>
+                    </form>
+                    <form action="/actions/dislike" method="post">
+                        <div>
+                            <button type="submit">Dislike</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

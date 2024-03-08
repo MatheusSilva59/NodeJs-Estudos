@@ -1,0 +1,122 @@
+Project name: Get A Pet
+
+Pages:
+    Home:
+        url: /
+        navbar (Without authentication): Adopt (/), Login, Register
+        navbar (With authentication): Adopt, My Adopts, My Pets, My Profile, Logout
+        body:
+            {
+                Adopt a Pet
+                See the details of each one below and meet their tutors
+            }
+            {
+                Image
+                weight
+                see details <link>
+                    SeeDetails Page:
+                        url: pet/_id
+                        body:
+                            {
+                                Meeting the pet: petName
+                                If you are interested, schedule a visit to meet it.
+                                petImage,
+                                weight,
+                                age,
+                                btn: Schedule a visit
+                            }
+                        Expected behavior: A flash message containing the status of the edition. If success the message should contain the tutos cellphone number. 
+                        An user is not allowed to schedule a visit for a pet that they have registered.
+            }
+    Register:
+        url: register
+        body:
+            {
+                Register
+                name, cellphone number, email, password, passwordConfirmation
+                btn: Register
+                text: Do you already have an account? Click here <link that redirects to login page>
+            }
+        Expected behavior: To log in automatically when the user is created successfully and redirect to home page with a flash success message
+    Login:
+        url: login
+        body:
+            {
+                Login
+                email, password
+                btn: Log In
+                text: Don't have an account? Click here <link that redirects to register page>
+            }
+
+    With authentication Pages:
+        My Profile:
+            url: user/profile
+            body: 
+                {
+                    Profile,
+                    image, (Should have the image preview and be an upload for one image)
+                    email,
+                    name,
+                    cellphone number,
+                    password,
+                    passwordConfirmation
+                }
+            Expected behavior: A flash message containing the status of the edition.
+        My Pets:
+            url: pet/mypets
+            body:
+                {
+                    My Pets Registered
+
+                    if (thereArePetsRegistered){
+                        There is no pet registered yet.
+                    }
+                    else{
+                        <list>
+                        petImage, btn: edit, delete (If the adoption process has been finished, should be show the petImage and Pet Already Adopted. Also, if someone requested a visit, should be add a button called Finish Adoption)
+                        {
+                            EditPage:
+                                    url: pet/edit/_id
+                                    body:
+                                        {
+                                            Editing pet: petName
+                                            After the edition the data will be update on the system.
+                                            <form>
+                                            image, (Should have the image preview and be an upload to multiple images)
+                                            petName,
+                                            petAge,
+                                            petWeight,
+                                            Color <dropdown>
+                                        }
+                                    Expected behavior: A flash message containing the status of the edition.
+                        }
+                    }
+
+                    btn: Register Pet
+                }
+            Register Pet Page:
+                url: pet/add
+                body:
+                    {
+                        Register a Pet
+                        After that it will be available for adoption
+                        <form>
+                        image, (Should have the image preview and be an upload to multiple images)
+                        petName,
+                        petAge,
+                        petWeight,
+                        Color <dropdown>
+                    }
+        My Adopts:
+            url: pet/myadoptios
+            body:
+                {
+                    My Adopts
+                    if (thereArePetsAdopted){
+                        There is no pet adopted yet.
+                    }
+                    else{
+                        petImage, {CallTo: tutors cellphone, Speak with: tutors name}, adoption status
+                    }
+                }
+    

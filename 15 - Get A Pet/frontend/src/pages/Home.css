@@ -1,0 +1,36 @@
+div.title h3 {
+    margin-top: 0;
+    color: black;
+    font-weight: 400;
+}
+
+div.content {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(auto-fill, minmax(calc(250px - 1%), 2fr));
+    gap: calc(2dvw);
+    margin-bottom: 3em;
+}
+
+div.content h1 {
+    margin: 0.5em 0 0 0;
+}
+
+div.content>.pet {
+    /* outline: 1px solid black; */
+    flex-basis: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+div.content span {
+    font-weight: 400;
+}
+
+.block-img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

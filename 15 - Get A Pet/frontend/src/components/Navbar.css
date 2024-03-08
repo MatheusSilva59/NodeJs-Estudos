@@ -1,0 +1,130 @@
+#navbar {
+    padding: 1em .5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color);
+}
+
+#navbar a {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--sub-color);
+    transition-duration: .5s;
+    font-size: small;
+    margin: 0 .5em;
+    padding: 0 .5em;
+    border-radius: .25em;
+    flex-grow: 1;
+}
+
+@media (max-width: 1030px) {
+    #navbar a {
+        padding: 0.25em .5em !important;
+        margin: 0 .5em !important;
+    }
+}
+
+#iconSpace {
+    flex-grow: 1;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    margin: 0 2em;
+}
+
+.icon-message {
+    margin: 0 !important;
+    flex-basis: 95%;
+    font-size: 24px !important;
+}
+
+@media (max-width: 760px) {
+    #iconSpace{
+        width: 5%;
+    }
+    .icon-message{
+        display: none;
+    }
+}
+
+
+#icon {
+    width: min(45px, 30%);
+}
+
+@media (min-width: 650px) {
+    #navbar a:not(.icon-message):hover {
+        background-color: var(--sub-color);
+        color: #fff;
+    }
+}
+
+@media (min-width: 535px) {
+    #navbar a {
+        font-size: 16px;
+        margin: 0 1.5em;
+        padding: .5em 1em;
+        border-radius: .5em;
+    }
+}
+
+.nav-h {
+    display: flex;
+    width: 100%;
+    padding: 1em 0;
+    flex-direction: column;
+}
+
+.btn-h button {
+    width: min(60px, 7dvw);
+    border: none;
+    background: transparent;
+    transition: .7s ease;
+}
+
+.btn-h button:hover {
+    cursor: pointer;
+    background-color: #36321f7c;
+    /* transform: rotateY(180deg); */
+}
+
+.btn-h {
+    display: flex;
+    justify-content: end;
+}
+
+
+.nav-h-menu {
+    height: 0px;
+    transition: 1s ease;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-h-menu li {
+    transition: .5s;
+}
+
+/* .nav-h-extent {
+    height: 100px !important;
+} */
+
+@media (max-width: 650px) {
+    #navbar {
+        padding: .5em .5em;
+        justify-content: center;
+    }
+
+    .nav-h-menu li:hover {
+        background-color: var(--sub-color);
+    }
+
+    .nav-h-menu li:hover * {
+        color: #fff !important;
+    }
+}

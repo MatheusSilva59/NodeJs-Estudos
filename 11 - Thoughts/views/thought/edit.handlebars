@@ -1,0 +1,33 @@
+<div class="container">
+    <div id="thought">
+        {{!-- {{#if message.error}}
+        <div class="flash flash-error">
+            <div>
+                <p>{{message.error}}</p>
+            </div>
+        </div>
+        {{/if}} --}}
+        <div>
+            <a href="dashboard">Return</a>
+        </div>
+        <div>
+            <h1 class="header">Edit a Thought: </h1>
+        </div>
+        <div>
+            <form action="/thought/edit" method="post">
+                <input type="hidden" name="id" value="{{thought.id}}">
+                <div id="add">
+                    <label for="message">Message: </label>
+                    <input type="text" name="message" id="message" value="{{thought.message}}">
+                </div>
+                <div id="date">
+                    <p>Created At: {{thought.createdAt}}</p>
+                    <p>Last Updated: {{thought.updatedAt}}</p>
+                </div>
+                <div>
+                    <button class="btn-default" type="input">Edit Thought</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

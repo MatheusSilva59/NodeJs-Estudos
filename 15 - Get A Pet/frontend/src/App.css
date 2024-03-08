@@ -1,0 +1,181 @@
+:root {
+  --auto-fill: 1;
+}
+
+@media (min-width: 2048px) {
+  :root {
+    --auto-fill: 6
+  }
+}
+
+@media (min-width: 1250px) and (max-width: 2048px) {
+  :root {
+    --auto-fill: 4
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1250px) {
+  :root {
+    --auto-fill: 3
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  :root {
+    --auto-fill: 2
+  }
+}
+
+/*  */
+
+.auto-layout {
+  display: grid;
+  width: calc((250px + .3vw) * var(--auto-fill));
+  row-gap: .3vw;
+  margin-bottom: calc(2% * (6 / var(--auto-fill)) + 0px);
+  min-width: 0;
+  min-height: 0;
+  justify-content: center;
+}
+
+.auto-column {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+}
+
+.auto-layout>div {
+  width: 250px;
+  height: 250px;
+  justify-self: center;
+}
+
+.auto-layout>div>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*  */
+.divMain {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+main {
+  flex: 1;
+}
+
+/* container */
+
+#container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10vw;
+}
+
+#container>div.title {
+  flex-basis: 15%;
+}
+
+/* buttons */
+
+.btn {
+  border-radius: .5em;
+  padding: .75em 1.5em;
+  border: none;
+  font-weight: bold;
+  transition-duration: .3s;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-small {
+  border-radius: .25em;
+  padding: .5em 1em;
+  border: none;
+  /* font-weight: bold; */
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-small-custom {
+  padding: 0.5em 2em !important;
+}
+
+.btn-info-inverse {
+  font-size: medium;
+  color: #154698;
+  background-color: white;
+  outline: 2px solid #154698;
+}
+
+.btn-info-inverse:hover {
+  background-color: #154698;
+  color: white;
+  /* outline: 2px solid white; */
+}
+
+.btn-info {
+  font-size: medium;
+  color: white;
+  background-color: #154698;
+  border: 1px solid #154698;
+}
+
+.btn-info:hover {
+  background-color: white;
+  color: #154698;
+}
+
+.btn-success-outline {
+  /* font-size: medium; */
+  color: #25B459;
+  background: transparent;
+  outline: 1px solid #25B459;
+}
+
+.btn-success-outline:hover {
+  cursor: pointer;
+  background-color: #25B459;
+  color: white;
+}
+
+.btn-success {
+  font-size: large;
+  color: white;
+  background-color: #25B459;
+}
+
+.btn-success:hover {
+  background-color: #1D8A43;
+  cursor: pointer;
+}
+
+.btn-details {
+  background-color: #FFD50C;
+  color: #154698;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.btn-details:hover {
+  background-color: #E7C416;
+  color: white;
+}
+
+.btn-fullwidth {
+  width: 100%;
+}
+
+.btn-85width {
+  width: 85%;
+}
+
+/* texts */
+
+.success {
+  color: #25B459;
+  margin: 0.75em 0;
+}

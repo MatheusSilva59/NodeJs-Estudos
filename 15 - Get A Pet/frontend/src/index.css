@@ -1,0 +1,43 @@
+:root {
+  font-family: Helvetica, system-ui, Avenir, Inter, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--sub-color);
+  /* background-color: #fff; */
+  /* background-color: black; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --main-color: #FFD50C;
+  --sub-color: #234798;
+
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+span{
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 15px; /* Largura da barra de rolagem */
+}
+
+/* Estilo do "polegar" (a parte que você arrasta) */
+::-webkit-scrollbar-thumb {
+  background-color: #333; /* Cor de fundo do "polegar" */
+  border-radius: 5px; /* Borda arredondada do "polegar" */
+}
+
+/* Estilo da trilha (a parte da barra de rolagem onde o "polegar" se move) */
+::-webkit-scrollbar-track {
+  background-color: #1a1a1a; /* Cor de fundo da trilha */
+}

@@ -1,0 +1,31 @@
+<div class="container">
+    <div id="register">
+        <div>
+            <h1 class="header">Register</h1>
+        </div>
+        <form action="/register" method="post">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div>
+                <label for="passwordConfirmation">Password confirmation:</label>
+                <input type="password" name="passwordConfirmation" id="passwordConfirmation" required>
+            </div>
+            <div>
+                <input class="btn-default" type="submit" value="Register">
+            </div>
+        </form>
+        <div>
+            <h5>Do you already have an account? <a href="/login">Click here</a></h5>
+        </div>
+    </div>
+</div>

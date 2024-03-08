@@ -1,0 +1,32 @@
+<div class="container">
+    <div id="dashboard">  
+        <div id="addThought">
+            <h1 class="header">Dashboard</h1>
+            <a class="btn-default" href="add">New thought</a>
+            {{!-- <button class="btn-default" href="add">New thought</button> --}}
+        </div>
+        <div>
+            <h3>Your thoughts:</h3>
+        </div>
+        <div id="myThoughts">
+            {{#if thoughts}}
+            {{#each thoughts}}
+            <div class="thoughts">
+                <h3>{{this.message}}</h3>
+                <div>
+                    <form action="/thought/edit/{{this.id}}" method="get">
+                        <button class="btn-secondary" type="submit">Edit</button>
+                    </form>
+                    <form action="/thought/delete" method="post">
+                        <input type="hidden" name="id" value="{{this.id}}">
+                        <button class="btn-secondary" type="submit">Delete</button>
+                    </form>
+                </div>
+            </div>
+            {{/each}}
+            {{else}}
+            <p>There are no thoughts created yet, you can create by <a href="add">clicking here</a>.</p>
+            {{/if}}
+        </div>
+    </div>
+</div>

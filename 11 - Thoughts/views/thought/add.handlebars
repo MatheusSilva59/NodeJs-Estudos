@@ -1,0 +1,28 @@
+<div class="container">
+    <div id="thought">
+        {{!-- {{#if message.error}}
+        <div class="flash flash-error">
+            <div>
+                <p>{{message.error}}</p>
+            </div>
+        </div>
+        {{/if}} --}}
+        <div>
+            <a href="dashboard">Return</a>
+        </div>
+        <div>
+            <h1 class="header">Creating a Thought: </h1>
+        </div>
+        <div>
+            <form action="/thought/add" method="post">
+                <div id="add">
+                    <label for="message">Message: </label>
+                    <input type="text" name="message" id="message" placeholder="Write your thought">
+                </div>
+                <div>
+                    <button class="btn-default" type="input">Create Thought</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

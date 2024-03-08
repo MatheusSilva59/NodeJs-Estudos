@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <a href="/"><i class="bi bi-lightbulb"></i></a>
+        <ul>
+            <li>
+                <a href="/">Thoughts</a>
+            </li>
+            {{#if userId}}
+            <li>
+                <a href="/thought/dashboard">Dashboard</a>
+            </li>
+            <li>
+                <form action="/logout" method="post">
+                    <button type="submit">Logout</button>
+                </form>
+            </li>
+            {{else}}
+            <li>
+                <a href="/login">Login</a>
+            </li>
+            <li>
+                <a href="/register">Register</a>
+            </li>
+            {{/if}}
+        </ul>
+    </nav>
+    <main>
+        {{#if messages.message}}
+        {{#each messages.message}}
+        <div class="flash flash-{{this.level}}">
+            <div>
+                <p>
+                    {{this.message}}
+                </p>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+
+        {{{body}}}
+    </main>
+    <footer id="footer">
+        <span>Thoughts</span> ® 2023
+    </footer>
+</body>
+
+</html>

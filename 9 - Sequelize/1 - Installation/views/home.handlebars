@@ -1,0 +1,20 @@
+<h1>Sequelize</h1>
+<div class="users">
+    {{#each users}}
+    <div class="user">
+        <h1>{{this.name}}</h1>
+        <h4>{{this.occupation}}</h4>
+        <div class="btn-control">
+            <form action="/users/{{this.id}}" method="get">
+                <input type="submit" value="Details" class="detail">
+            </form>
+            <form action="/users/{{this.id}}/edit" method="get">
+                <input type="submit" value="Edit">
+            </form>
+            <form action="/users/delete/{{this.id}}" method="post">
+                <input type="submit" value="Delete" class="delete">
+            </form>
+        </div>
+    </div>
+    {{/each}}
+</div>

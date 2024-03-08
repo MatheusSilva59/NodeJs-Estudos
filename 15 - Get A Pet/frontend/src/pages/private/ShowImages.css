@@ -1,0 +1,29 @@
+.imgAction {
+    position: relative;
+    transition: .1s;
+}
+
+.imgAction:hover>img{
+    filter: brightness(.5);
+}
+
+.imgAction:hover>img ~ svg{
+    display: block;
+}
+
+.imgAction>svg {
+    fill: white;
+    width: 10%;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    cursor: pointer;
+    transition: .15s;
+    display: none;
+}
+
+.imgAction>svg:hover {
+    width: 15%;
+    top: 42.5%;
+    left: 42.5%;
+}

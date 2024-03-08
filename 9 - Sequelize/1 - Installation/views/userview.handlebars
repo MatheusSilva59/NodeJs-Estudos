@@ -1,0 +1,134 @@
+<h1>User View:</h1>
+<div class="user-single">
+    <form action="/users/update" method="post">
+        <div class="edit">
+            <input type="hidden" name="id" value="{{user.id}}">
+            <div class="form-control">
+                <label for="name"> Name:</label>
+                <input type="text" name="name" id="name" value="{{user.name}}" {{#if viewMode}}disabled{{/if}}>
+            </div>
+            <div class="form-control">
+                <label for="occupation"> Occupation:</label>
+                <input type="text" name="occupation" id="occupation" value="{{user.occupation}}" {{#if
+                    viewMode}}disabled{{/if}}>
+            </div>
+            <div class="checkbox-newsLetter">
+                <label for="newsLetter">
+                    <h4>Would like to receive newsletter?</h4>
+                </label>
+                <input type="checkbox" name="newsLetter" id="newsLetter" {{#if user.newsLetter}}checked{{/if}} {{#if
+                    viewMode}}disabled{{/if}}>
+            </div>
+        </div>
+        <div class="btn-control">
+            {{#if viewMode}}
+            {{else}}
+            <input type="submit" value="Save">
+            {{/if}}
+        </div>
+    </form>
+    <div class="user-single-bottom">
+        <div>
+            <h5>Created: {{user.createdAt}}</h5>
+            <h5>Last Updated: {{user.updatedAt}}</h5>
+        </div>
+        <div class="btn-control">
+            {{#if viewMode}}
+            <form action="/users/{{user.id}}/edit" method="get">
+                <input type="submit" value="Edit">
+            </form>
+            {{/if}}
+        </div>
+    </div>
+</div>
+{{#if viewMode}}
+<h1>Addresses</h1>
+<div class="address">
+    {{#each user.Addresses}}
+    <div class="address-single">
+        <form action="/address/update" method="post">
+            <input type="hidden" name="UserId" value="{{this.UserId}}">
+            <input type="hidden" name="id" value="{{this.id}}">
+            <div class="form-control">
+                <label for="name">
+                    Name:
+                </label>
+                <input type="text" name="name" id="name" value="{{this.name}}" {{#if
+                    this.editionMode}}{{else}}disabled{{/if}}>
+            </div>
+            <div class="form-control">
+                <label for="street">
+                    Street:
+                </label>
+                <input type="text" name="street" id="street" value="{{this.street}}" {{#if
+                    this.editionMode}}{{else}}disabled{{/if}}>
+            </div>
+            <div class="form-control">
+                <label for="number">
+                    Number:
+                </label>
+                <input type="text" name="number" id="number" value="{{this.number}}" {{#if
+                    this.editionMode}}{{else}}disabled{{/if}}>
+            </div>
+            <div class="form-control">
+                <label for="city">
+                    City:
+                </label>
+                <input type="text" name="city" id="city" value="{{this.city}}" {{#if
+                    this.editionMode}}{{else}}disabled{{/if}}>
+            </div>
+            <div class="btn-control">
+                {{#if this.editionMode}}<input type="submit" value="Save">{{/if}}
+            </div>
+        </form>
+        {{#if this.editionMode}}
+        {{else}}
+        <div class="btn-control btn-full">
+            <div>
+                <form action="/users/{{this.UserId}}/address/{{this.id}}/edit" method="get">
+                    <input type="submit" value="Edit">
+                </form>
+            </div>
+            <form action="/users/{{this.UserId}}/address/delete/{{this.id}}" method="post">
+                <input type="submit" value="Delete">
+            </form>
+        </div>
+        {{/if}}
+        {{!-- {{editionData.id}} --}}
+    </div>
+    {{/each}}
+    <div class="address-single">
+        <form action="/address/create" method="post">
+            <input type="hidden" name="UserId" name="UserId" value="{{user.id}}">
+            <div class="form-control">
+                <label for="name">
+                    Name:
+                </label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="form-control">
+                <label for="street">
+                    Street:
+                </label>
+                <input type="text" name="street" id="street">
+            </div>
+            <div class="form-control">
+                <label for="number">
+                    Number:
+                </label>
+                <input type="text" name="number" id="number">
+            </div>
+            <div class="form-control">
+                <label for="city">
+                    City:
+                </label>
+                <input type="text" name="city" id="city">
+            </div>
+            <div class="btn-control btn-full">
+                <input type="submit" value="Add">
+            </div>
+        </form>
+    </div>
+</div>
+{{/if}}
+{{!-- {{#if user.newsLetter}}Yes{{else}}No{{/if}} --}}

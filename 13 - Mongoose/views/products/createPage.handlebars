@@ -1,0 +1,26 @@
+<div class="container">
+    <div id="form-control">
+        <h1>Create Product</h1>
+        <form action="/products/create" method="post">
+            <div>
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name" placeholder="What is the product name?">
+            </div>
+            <div>
+                <label for="price">Price: </label>
+                <input type="number" name="price" id="price" placeholder="What is the product price?">
+            </div>
+            <div>
+                <label for="image">Image URL: </label>
+                <input type="text" name="image" id="image" placeholder="Type an URL for that product.">
+            </div>
+            <div>
+                <label for="description">Description: </label>
+                <textarea name="description" id="description" placeholder="Describe the product."></textarea>
+            </div>
+            <div>
+                <input class="btn-default" type="submit" value="Add Product">
+            </div>
+        </form>
+    </div>
+</div>

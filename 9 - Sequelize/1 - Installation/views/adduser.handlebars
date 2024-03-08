@@ -1,0 +1,19 @@
+<h1>Registration:</h1>
+<form action="/users/create" method="post" class="form">
+
+    <div class="form-control">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="What is your name?">
+    </div>
+    <div class="form-control">
+        <label for="occupation">Occupation:</label>
+        <input type="text" name="occupation" id="occupation" placeholder="What is your occupation?">
+    </div>
+    <div class="form-control-checkbox">
+        <label for="newsLetter">Would you like to receive the newsletter?</label>
+        <input type="checkbox" name="newsLetter" id="newsLetter">
+    </div>
+
+    <input type="submit" value="Register">
+</form>
+{{!-- <a href="/"></a> --}}

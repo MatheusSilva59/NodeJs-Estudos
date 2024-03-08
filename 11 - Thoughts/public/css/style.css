@@ -1,0 +1,411 @@
+* {
+    font-family: helvetica;
+    margin: 0;
+    padding: 0;
+    --bg-color: #222222;
+    --sub-color: #f6982d;
+    color: #fff;
+    background-color: var(--bg-color);
+}
+
+#navbar {
+    border-bottom: 3px solid var(--sub-color);
+    ;
+    padding: 2em 2em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar i {
+    font-size: 32px;
+    color: var(--sub-color);
+}
+
+#navbar i:hover {
+    animation-duration: 2s;
+    transition: linear;
+    color: #cec5bb;
+    cursor: pointer;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+#navbar ul li {
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#navbar ul li button {
+    border: 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#navbar ul li button:hover {
+    color: var(--sub-color);
+    cursor: pointer;
+}
+
+#navbar ul li a:hover {
+    color: var(--sub-color);
+}
+
+/* footer start */
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+footer {
+    /* position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; */
+    padding: 3em;
+    text-align: center;
+    border-top: 3px solid var(--sub-color);
+}
+
+footer span {
+    color: var(--sub-color);
+    font-weight: bold;
+}
+
+/* footer end */
+
+main {
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.container div:not(#allThoughts, .thought) {
+    margin-bottom: 1em;
+}
+
+.container h1.header {
+    border-left: 4px solid var(--sub-color);
+    padding: .3em;
+}
+
+/* home start */
+
+#home {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    margin-top: 3em;
+    /* align-items: center; */
+}
+
+#home h1 {
+    font-size: 42px;
+}
+
+#home div:not(#allThoughts, .thought) {
+    /* flex-basis: 100%; */
+    display: flex;
+    justify-content: center;
+}
+
+#finder {
+    flex-direction: column;
+}
+
+#finder form {
+    flex-basis: 100%;
+}
+
+#finder form div input[type="text"] {
+    border: 0;
+    border-bottom: 1px solid white;
+    padding-left: .3em;
+}
+
+#finder form div {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+
+#finder form div input[type="text"] {
+    flex-basis: 40%;
+}
+
+#finder ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+#finder ul li {
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+#finder ul li:not(:last-child) a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+#finder ul li a:hover,
+#finder i {
+    color: var(--sub-color);
+}
+
+#home span {
+    color: var(--sub-color);
+}
+
+.btn-default {
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0.4em 1.5em;
+    color: var(--sub-color);
+    border: 3px solid var(--sub-color);
+    text-decoration: none;
+    margin: auto 0;
+    font-weight: bold;
+}
+
+.btn-default:hover {
+    color: white;
+    background-color: #AC6C2A;
+    cursor: pointer;
+}
+
+#allThoughts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3em;
+}
+
+.thought {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: .5em;
+    padding-left: .5em;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid #434040;
+}
+
+
+.thought h2 {
+    font-size: 28px;
+    font-style: italic;
+    margin-bottom: .5em;
+}
+
+/* home end */
+
+/* dashboard start */
+
+
+#dashboard {
+    flex-basis: 75%;
+    margin-top: 2em;
+}
+
+#dashboard>div {
+    margin-bottom: 2em;
+}
+
+#addThought {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#myThoughts {
+    margin-top: 2em;
+    margin-bottom: 3em !important;
+}
+
+.thoughts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--sub-color);
+}
+
+.thoughts>div {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    margin-right: 3em;
+}
+
+.thoughts h3 {
+    margin: auto 0;
+    color: var(--sub-color);
+}
+
+.btn-secondary {
+    font-size: 18px;
+    border-radius: 7px;
+    padding: 0.4em 1.5em;
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    margin: auto 0;
+    font-weight: bold;
+}
+
+.btn-secondary:hover {
+    color: white;
+    background-color: var(--sub-color);
+    cursor: pointer;
+}
+
+/* dashboard end */
+
+/* add/edit start */
+
+#thought {
+    flex-basis: 75%;
+}
+
+#thought input[type="text"] {
+    border-radius: 3px;
+    border: 1px solid var(--sub-color);
+    padding: .5em;
+}
+
+#thought>div:first-child {
+    margin: 2em 0;
+}
+
+#thought a {
+    font-weight: bold;
+}
+
+#thought a {
+    /* text-decoration: none; */
+    color: var(--sub-color);
+}
+
+#add {
+    display: flex;
+    flex-direction: column;
+}
+
+#add label {
+    margin-bottom: 0.5em;
+}
+
+#add input {
+    width: 25%;
+}
+
+#date p {
+    margin-bottom: .3em;
+}
+
+/* add/edit end */
+
+/* login/register start */
+#register,
+#login {
+    flex-basis: 25%;
+    margin-top: 2em;
+}
+
+#register div:not(:last-child),
+#login div:not(:last-child) {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0em;
+}
+
+#register div,
+#login div {
+    font-weight: bold;
+}
+
+#register label,
+#login label {
+    margin-bottom: .5em;
+}
+
+#register input:not([type="submit"]),
+#login input:not([type="submit"]) {
+    border-radius: 3px;
+    border: 1px solid var(--sub-color);
+    padding: .5em;
+}
+
+#register a,
+#login a {
+    color: var(--sub-color);
+}
+
+/* login/register end */
+
+/* flash start */
+
+.flash {
+    margin-top: 2em;
+}
+
+.flash,
+.flash>div {
+    display: flex;
+    justify-content: center;
+}
+
+.flash>div {
+    flex-basis: 40%;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.flash-success div,
+.flash-success p {
+    background-color: #CCE5FE;
+}
+
+.flash-success p {
+    color: #566374;
+    font-weight: 400;
+}
+
+.flash-error div,
+.flash-error p {
+    background-color: #c63d3d;
+}
+
+.flash-error p,
+.flash-warning p {
+    color: black;
+    font-weight: 400;
+}
+
+.flash-warning div,
+.flash-warning p {
+    background-color: #dcce2e;
+}
+
+/* flash end */

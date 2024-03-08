@@ -1,0 +1,14 @@
+<form action="/books/update" method="post" class="form">
+    {{#with book}}
+    <input type="hidden" name="id" id="id" value="{{id}}">
+    <div class="form-control">
+        <label for="title">Title: </label>
+        <input type="text" name="title" id="title" value="{{title}}">
+    </div>
+    <div class="form-control">
+        <label for="pages">Pages: </label>
+        <input type="number" name="pages" id="pages" value="{{pages}}">
+    </div>
+    {{/with}}
+    <input type="submit" value="Edit">
+</form>

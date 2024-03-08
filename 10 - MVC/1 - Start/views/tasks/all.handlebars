@@ -1,0 +1,44 @@
+<h1>All Tasks</h1>
+<div class="alltasks">
+    {{#each tasks}}
+
+    <div class="tasks">
+        <h2>{{this.title}}</h2>
+        <h4>{{this.description}}</h4>
+        {{#if this.done}}
+        <h5>
+            Status: Completed
+        </h5>
+        <h6>Created: {{this.createdAt}}</h6>
+        <h6>Completed: {{this.updatedAt}}</h6>
+        {{else}}
+        <h5>
+            Status: Pending
+        </h5>
+        <h6>Created: {{this.createdAt}}</h6>
+        <h6>Last Update: {{this.updatedAt}}</h6>
+        {{/if}}
+        <div class="actions">
+            <form action="/tasks/toggleTaskStatus" method="post">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <input type="hidden" name="status" value="{{this.done}}">
+                <button>
+                    <i class="bi bi-check2"></i>
+                </button>
+            </form>
+            <form action="/tasks/edit/{{this.id}}" method="get">
+                {{!-- <input type="hidden" name="id" value="{{this.id}}"> --}}
+                <button>
+                    <i class="bi bi-pencil-square"></i>
+                </button>
+            </form>
+            <form action="/tasks/delete" method="post">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <button type="submit">
+                    <i class="bi bi-x"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    {{/each}}
+</div>

@@ -1,0 +1,223 @@
+body {
+    background-color: white;
+    color: black;
+    margin: 0;
+    /* border: 0; */
+}
+
+footer{
+    text-align: center;
+    margin: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+
+nav ul li a:hover {
+    color: rgb(22, 21, 19);
+    text-decoration: underline;
+}
+
+.users{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    /* flex-wrap: wrap; */
+    margin: 0 5%;
+    gap: 1%;
+}
+.address{
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 0 5%;
+    gap: 1%;
+    justify-content: space-evenly;
+}
+.users h1 {
+    text-align: start;
+}
+
+.user, .address-single {
+    padding: 15px 15px;
+    flex: 0.1 1 33%;
+    border: 1px solid grey;
+    border-radius: 1%;
+}
+
+.address-single{
+    margin: 2%;
+}
+.user-single {
+    margin: 0% 5%;
+    padding: 15px 15px;
+    /* flex: 0.1 1 33%; */
+    border: 1px solid grey;
+}
+/* .address-single{
+    margin: 0% 15%;
+    padding: 15px 15px;
+    flex: 0.1 1 100%;
+    border: 1px solid grey;
+} */
+.btn-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.btn-control input {
+    font-size: medium;
+    padding: 10px 15px;
+    border: 0.5px solid;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.detail {
+    border-color: lightblue !important;
+}
+
+.delete {
+    border-color: red !important;
+}
+
+.btn-control input:hover {
+    cursor: pointer;
+    background-color: rgba(41, 45, 92, 0.304);
+}
+
+.btn-control .detail:hover {
+    cursor: pointer;
+    background-color: rgba(37, 24, 132, 0.472);
+}
+
+.btn-control .delete:hover {
+    cursor: pointer;
+    background-color: rgba(136, 33, 33, 0.524);
+}
+.btn-full form input, .btn-full input{
+    width: 100%;
+}
+
+.checkbox-newsLetter {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin: 15px 0px;
+}
+
+.checkbox-newsLetter h4,
+input {
+    margin: 0px;
+}
+
+.checkbox-newsLetter input {
+    margin-right: 3px;
+}
+
+.edit {
+    margin: 0 !important;
+}
+
+.user-single h5 {
+    margin: 5px 0px;
+}
+
+.user-single-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-single form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+
+}
+
+.form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-control label {
+    font-weight: bold;
+    margin-bottom: .3em;
+}
+
+.form-control input {
+    padding: 5px;
+}
+
+.form-control-checkbox {
+    font-weight: bold;
+    padding: .3em .3em .3em 0;
+    margin-bottom: 1em;
+}
+
+table {
+    text-align: justify;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 8px 8px 8px 3px;
+    border: 1px solid black;
+}
+
+.norow {
+    padding-left: 15px;
+    border: 0;
+}
+
+.table-link {
+    text-align: center;
+}
+
+.table-link a {
+    fill: white;
+}
+
+.table-link a:hover {
+    fill: rgb(37, 37, 188);
+    animation-duration: .5s;
+}
+
+div.table {
+    display: flex;
+    justify-content: center;
+}
